@@ -1,15 +1,15 @@
 package aula04;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
 
 public class Receita {
 
-    public String nome;
-    public int tempoPreparo;
-    public int rendimentoPorcoes;
-    public List<String> ingredientes;
+    private String nome;
+    private int tempoPreparo;
+    private int rendimentoPorcoes;
+    private List<String> ingredientes;
 
     public Receita(String nome, int tempoPreparo, int rendimentoPorcoes){
 
