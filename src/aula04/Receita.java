@@ -1,69 +1,73 @@
 package aula04;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Receita {
+
     public String nome;
     public int tempoPreparo;
-    public int redimentosPorcoes;
-    public List<String> Ingredientes;
+    public int rendimentoPorcoes;
+    public List<String> ingredientes;
 
-    public Receita(String nome, int TempoPreparo, int rendimentosPorcoes) {
-        if (nome == null || nome.isEmpty() || tempoPreparo <= 0 || rendimentosPorcoes <=0){
+    public Receita(String nome, int tempoPreparo, int rendimentoPorcoes){
+
+        if(nome == null || nome.isEmpty() || nome.isBlank() || tempoPreparo <= 0 || rendimentoPorcoes <= 0) {
             throw new IllegalArgumentException();
-
-        }
-        else {
+        } else {
             this.nome = nome;
-            this.tempoPreparo = TempoPreparo;
-            this.redimentosPorcoes = rendimentosPorcoes;
+            this.tempoPreparo = tempoPreparo;
+            this.rendimentoPorcoes = rendimentoPorcoes;
+            this.ingredientes = new ArrayList<>();
         }
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setTempoPreparo(int TempoPreparo) {
-        if (tempoPreparo <= 0){
-            throw new IllegalArgumentException("Seu valor é inválido");
-        }
-        else {
-            this.tempoPreparo = TempoPreparo;
-        }
-    }
-    public int getTempoPreparo(){
+    public int getTempoPreparo() {
         return tempoPreparo;
     }
-    public int getRendimentoPorcoes(){
-        return redimentosPorcoes;
-    }
-    public void setRendimentoPorcoes(int redimentosPorcoes){
-        if (redimentosPorcoes <= 0){
-            throw new IllegalArgumentException("Seu valor é inválido");
+
+    public void setTempoPreparo(int tempoPreparo){
+        if(tempoPreparo <= 0){
+            throw new IllegalArgumentException("O tempo de preparo não pode ser menor ou igual a 0.");
+        } else {
+            this.tempoPreparo = tempoPreparo;
         }
-        else {
-            this.redimentosPorcoes = redimentosPorcoes;
-        }
-    }
-    public List<String> getIngredientes(){
-        return Ingredientes;
     }
 
-    public void adicionarIngrediente(String ingredientes){
-        if (ingredientes != null || !ingredientes.isEmpty()){
-            this.Ingredientes.add(ingredientes);
+    public int getRendimentoPorcoes(){
+        return rendimentoPorcoes;
+    }
+
+    public void setRendimentoPorcoes(int rendimentoPorcoes){
+        if(rendimentoPorcoes <= 0){
+            throw new IllegalArgumentException("O rendimento das porções não pode ser menor ou igual a 0.");
+        } else {
+            this.rendimentoPorcoes = rendimentoPorcoes;
         }
     }
+
+    public List<String> getIngredientes(){
+        return new ArrayList<>(ingredientes);
+    }
+
+    public void adicionarIngrediente(String ingrediente){
+
+        if(ingrediente != null && !ingrediente.isEmpty() && !ingrediente.isBlank()){
+            this.ingredientes.add(ingrediente);
+        }
+
+    }
+
     public void removerIngrediente(String ingrediente){
-        for (String verificar : Ingredientes){
-            if (verificar.equals(ingrediente)){
-                Ingredientes.remove(ingrediente);
-            }
+
+        if(ingredientes.contains(ingrediente)){
+            ingredientes.remove(ingrediente);
         }
     }
 }
