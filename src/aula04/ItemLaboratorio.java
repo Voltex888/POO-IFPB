@@ -66,6 +66,6 @@ private void atualizarStatus() {
         status = "ALERTA";
     } else {
         status = "NORMAL";
+        }
     }
 }
-    }
