@@ -7,9 +7,7 @@ public class Drone {
     private boolean emVoo;
 
     public Drone(String identificador) {
-        if (identificador == null || identificador.isBlank())
-            throw new IllegalArgumentException();
-
+        if (identificador == null || identificador.isBlank()) throw new IllegalArgumentException();
         this.identificador = identificador;
     }
 
@@ -30,24 +28,23 @@ public class Drone {
     }
 
     public void setBateria(int valor) {
-        if (valor > 100 || valor < 0)
-            throw new IllegalArgumentException();
-
-        this.bateria = valor;
+        if (valor > 100 || valor < 0) throw new IllegalArgumentException();
+        bateria = valor;
     }
 
     public void decolar() {
-        if (bateria > 20) {
-            emVoo = true;
+        if (bateria<=20) {
+            return;
         }
+        emVoo = true;
     }
 
-    public void setAltitude(int valor) {
-        if (!isEmVoo()) return;
-
-        if (valor > 120 || valor < 0) throw new IllegalArgumentException();
-
-        altitude = valor;
+    public void setAltitude(int metros) {
+        if (metros > 120 || metros <0) throw new IllegalArgumentException();
+        if (emVoo == false){
+            return;
+        }
+        altitude = metros;
     }
 
     public void pousar() {
