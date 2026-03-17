@@ -21,6 +21,7 @@ public class ItemLaboratorio {
         this.qtdDisponivel = qtdDisponivel;
         this.qtdMinima = qtdMinima;
 
+
         atualizarStatus();
     }
 
