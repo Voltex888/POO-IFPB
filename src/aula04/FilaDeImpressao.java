@@ -37,7 +37,7 @@ public class FilaDeImpressao {
     public int totalPaginasNaFila() {
         int total = 0;
         for (Documento d : fila) {
-            total += d.getNumeroPaginas();
+            total += 1;
         }
         return total;
     }
