@@ -36,7 +36,4 @@ public class Documento {
     public String getNome(){
         return nome;
     }
-    public int getNumeroPaginas(){
-        return numeroPaginas;
-    }
 }
