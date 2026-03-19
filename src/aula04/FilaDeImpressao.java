@@ -1,3 +1,4 @@
+
 package aula04;
 
 import java.util.ArrayList;
@@ -37,7 +38,7 @@ public class FilaDeImpressao {
     public int totalPaginasNaFila() {
         int total = 0;
         for (Documento d : fila) {
-            total += 1;
+            total += d.getNumeroPaginas();
         }
         return total;
     }
