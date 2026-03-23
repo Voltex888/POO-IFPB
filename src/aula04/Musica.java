@@ -6,8 +6,8 @@ public class Musica {
     private int duracaoSegundos;
     private String prioridade;
 
-    public Musica(String titulo, String artista, int duracaoSegundos, String prioridade){
-        if (titulo == null || artista == null || titulo.isBlank() || artista.isBlank()) {
+    public Musica(String titulo, String artista, int duracaoSegundos, String prioridade) {
+        if (titulo == null || artista == null || titulo.isEmpty() || artista.isEmpty()) {
             throw new IllegalArgumentException();
         }
 
@@ -15,22 +15,18 @@ public class Musica {
             throw new IllegalArgumentException();
         }
 
-        if (!prioridade.equals("NORMAL") && !prioridade.equals("URGENTE")) {
-            throw new IllegalArgumentException();
-        }
-
         this.titulo = titulo;
         this.artista = artista;
         this.duracaoSegundos = duracaoSegundos;
-        this.prioridade = prioridade;
+        setPrioridade(prioridade);
     }
 
-    public void setPrioridade(String nome) {
-        if (nome == null || nome.isBlank() || nome.isEmpty()) throw new IllegalArgumentException();
-        if (!nome.equals("NORMAL") && !nome.equals("URGENTE")) {
+    public void setPrioridade(String prioridade) {
+        if (prioridade == null || prioridade.isBlank() || prioridade.isEmpty()) throw new IllegalArgumentException();
+        if (!prioridade.equals("NORMAL") && !prioridade.equals("URGENTE")) {
             throw new IllegalArgumentException();
         }
-        this.prioridade = nome;
+        this.prioridade = prioridade;
     }
 
     public String getPrioridade() {
