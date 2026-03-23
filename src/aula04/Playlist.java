@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Playlist {
     private String nome;
-    public List<Musica> fila;
+    private List<Musica> fila;
+    private int indiceUrgente = 0;
 
     public Playlist(String nome){
         if (nome == null || nome.isBlank()) throw new IllegalArgumentException();
@@ -20,12 +21,8 @@ public class Playlist {
     public void adicionar(Musica m) {
         if (m == null) throw new IllegalArgumentException();
         if (m.getPrioridade().equals("URGENTE")){
-            int i = 0;
-
-          while (i < fila.size() && fila.get(i).getPrioridade().equals("URGENTE")) {
-            i++;
-        }
-        fila.add(i, m);
+            fila.add(indiceUrgente, m);
+            indiceUrgente++;
     } else {
         fila.add(m);
     }
