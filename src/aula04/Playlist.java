@@ -25,7 +25,6 @@ public class Playlist {
           while (i < fila.size() && fila.get(i).getPrioridade().equals("URGENTE")) {
             i++;
         }
-
         fila.add(i, m);
     } else {
         fila.add(m);
@@ -36,14 +35,14 @@ public class Playlist {
         if (fila.isEmpty()){
             return null;
         }
-        return fila.get(0);
+        return fila.getFirst();
     }
 
     public Musica reproduzirProxima() {
         if (fila.isEmpty()) {
             return null;
         }
-        return fila.remove(0);
+        return fila.removeFirst();
     }
     public void remover(String musica) {
         for (Musica m : fila){
