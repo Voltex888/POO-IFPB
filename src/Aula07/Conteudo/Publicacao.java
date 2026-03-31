@@ -1,6 +1,4 @@
-package Aula07;
-
-import java.util.Objects;
+package Aula07.Conteudo;
 
 public class Publicacao {
     private Criador criador;

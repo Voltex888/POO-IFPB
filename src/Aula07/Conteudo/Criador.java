@@ -1,6 +1,4 @@
-package Aula07;
-
-import java.util.Collection;
+package Aula07.Conteudo;
 
 public class Criador {
     private String nomeUsuario;

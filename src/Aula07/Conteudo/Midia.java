@@ -1,4 +1,4 @@
-package Aula07;
+package Aula07.Conteudo;
 
 public class Midia {
     private String tipo;
