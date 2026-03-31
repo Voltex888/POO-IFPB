@@ -1,4 +1,4 @@
-package Aula07;
+package Aula07.Farmacia;
 
 public class Ingrediente {
     private  String nome;

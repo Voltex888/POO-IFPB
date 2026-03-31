@@ -1,6 +1,4 @@
-package Aula07;
-
-import java.util.Collection;
+package Aula07.Farmacia;
 
 public class Pedido {
     private String nome;

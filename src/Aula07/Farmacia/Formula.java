@@ -1,4 +1,4 @@
-package Aula07;
+package Aula07.Farmacia;
 
 import java.util.ArrayList;
 import java.util.List;
