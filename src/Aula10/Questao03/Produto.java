@@ -1,5 +1,7 @@
 package Aula10.Questao03;
 
+import Aula10.Questao02.Personagem;
+
 import java.util.Objects;
 
 public class Produto {
@@ -37,7 +39,6 @@ public class Produto {
     public boolean equals(Object obj) {
         if (obj == null || getClass() != obj.getClass()) return false;
         Produto produto = (Produto) obj;
-        return Double.compare(preco, produto.preco) == 0 && Objects.equals(titulo, produto.titulo) && Objects.equals(autor, produto.autor);
+        return Objects.equals(titulo, produto.titulo) && Objects.equals(autor, produto.autor);
     }
-
 }
