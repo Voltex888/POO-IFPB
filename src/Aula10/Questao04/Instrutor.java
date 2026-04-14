@@ -1,0 +1,30 @@
+package Aula10.Questao04;
+
+public class Instrutor implements Avaliavel {
+    private String nome, especialidade;
+    private double notaMedia;
+
+    public Instrutor(String nome, String especialidade, double notaMedia) {
+        this.nome = nome;
+        this.especialidade = especialidade;
+        this.notaMedia = notaMedia;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    @Override
+    public double getNotaMedia() {
+        return notaMedia;
+    }
+
+    @Override
+    public String gerarResumoPublico() {
+        return "";
+    }
+}
