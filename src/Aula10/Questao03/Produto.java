@@ -35,10 +35,7 @@ public class Produto {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Produto produto = (Produto) obj;
-        return Objects.equals(titulo, produto.titulo) && Objects.equals(autor, produto.autor);
+    public boolean equals(Produto obj) {
+        return obj.getTitulo().equals(titulo) && obj.getAutor().equals(autor);
     }
 }
