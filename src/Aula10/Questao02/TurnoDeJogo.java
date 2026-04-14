@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TurnoDeJogo {
-    private Guerreiro guerreiro;
-    private Mago mago;
-    private Arqueiro arqueiro;
     private List<Personagem> personagens;
 
     public TurnoDeJogo() {
