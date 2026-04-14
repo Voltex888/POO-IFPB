@@ -34,9 +34,9 @@ public class Produto {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Produto produto = (Produto) o;
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Produto produto = (Produto) obj;
         return Double.compare(preco, produto.preco) == 0 && Objects.equals(titulo, produto.titulo) && Objects.equals(autor, produto.autor);
     }
 
