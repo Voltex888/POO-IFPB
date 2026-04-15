@@ -1,6 +1,6 @@
-package lista04.podcast;
+package ListaAula04.podcast;
 
-import aula04.Episodio;
+import Aula04.Episodio;
 import org.junit.Before;
 import org.junit.Test;
 

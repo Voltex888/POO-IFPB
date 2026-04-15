@@ -1,7 +1,7 @@
-package lista04.agendaMedica;
+package ListaAula04.agendaMedica;
 
-import aula04.AgendaMedica;
-import aula04.Consulta;
+import Aula04.AgendaMedica;
+import Aula04.Consulta;
 import org.junit.Before;
 import org.junit.Test;
 

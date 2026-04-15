@@ -1,6 +1,6 @@
-package tests.lista04.receita;
+package ListaAula04.receita;
 
-import aula04.Receita;
+import Aula04.Receita;
 import org.junit.Before;
 import org.junit.Test;
 

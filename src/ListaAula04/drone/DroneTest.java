@@ -1,6 +1,6 @@
-package tests.lista04.drone;
+package ListaAula04.drone;
 
-import aula04.Drone;
+import Aula04.Drone;
 import org.junit.Before;
 import org.junit.Test;
 

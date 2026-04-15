@@ -1,7 +1,7 @@
-package tests.lista04.impressao;
+package ListaAula04.impressao;
 
-import aula04.Documento;
-import aula04.FilaDeImpressao;
+import Aula04.Documento;
+import Aula04.FilaDeImpressao;
 import org.junit.Before;
 import org.junit.Test;
 

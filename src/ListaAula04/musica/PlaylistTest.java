@@ -1,7 +1,7 @@
-package lista04.musica;
+package ListaAula04.musica;
 
-import aula04.Musica;
-import aula04.Playlist;
+import Aula04.Musica;
+import Aula04.Playlist;
 import org.junit.Before;
 import org.junit.Test;
 

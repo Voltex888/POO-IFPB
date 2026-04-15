@@ -1,6 +1,6 @@
-package lista04.laboratorio;
-import aula04.EstoqueLaboratorio;
-import aula04.ItemLaboratorio;
+package ListaAula04.laboratorio;
+import Aula04.EstoqueLaboratorio;
+import Aula04.ItemLaboratorio;
 import org.junit.Before;
 import org.junit.Test;
 
