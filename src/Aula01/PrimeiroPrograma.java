@@ -1,4 +1,4 @@
-package aula01;
+package Aula01;
 
 public class PrimeiroPrograma {
 
