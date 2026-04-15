@@ -1,4 +1,4 @@
-package Lista06;
+package ListaAula10;
 
 import Aula10.Questao03.CatalogoPaginasECia;
 import Aula10.Questao03.Ebook;
