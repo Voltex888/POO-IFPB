@@ -1,11 +1,11 @@
 package Aula10.Questao04;
 
-public class TrilhaDeApredizado implements Avaliavel{
+public class TrilhaDeAprendizado implements Avaliavel{
     private String nome;
     private int numeroCursos;
     private double notaMedia;
 
-    public TrilhaDeApredizado(String nome, int numeroCursos, double notaMedia) {
+    public TrilhaDeAprendizado(String nome, int numeroCursos, double notaMedia) {
         this.nome = nome;
         this.numeroCursos = numeroCursos;
         this.notaMedia = notaMedia;
@@ -26,6 +26,8 @@ public class TrilhaDeApredizado implements Avaliavel{
 
     @Override
     public String gerarResumoPublico() {
-        return "";
+        return "Nome: " + nome +
+                "\n\tNúmero do Cursos: " + numeroCursos +
+                "\n\tNota Média: " + notaMedia;
     }
 }
