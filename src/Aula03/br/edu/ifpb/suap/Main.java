@@ -1,8 +1,7 @@
-package aula03.br.edu.ifpb.suap;
+package Aula03.br.edu.ifpb.suap;
 
-import aula03.br.edu.ifpb.suap.model.Estudante;
+import Aula03.br.edu.ifpb.suap.model.Estudante;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {

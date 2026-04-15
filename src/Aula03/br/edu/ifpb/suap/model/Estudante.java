@@ -1,7 +1,4 @@
-package aula03.br.edu.ifpb.suap.model;
-
-import java.time.LocalDateTime;
-import java.util.List;
+package Aula03.br.edu.ifpb.suap.model;
 
 public class Estudante {
     String nome;
