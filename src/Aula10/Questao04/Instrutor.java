@@ -25,6 +25,8 @@ public class Instrutor implements Avaliavel {
 
     @Override
     public String gerarResumoPublico() {
-        return "";
+        return "Nome: " + nome +
+                "\n\tEspecialidade : " + especialidade +
+                "\n\tNota Média: " + notaMedia;
     }
 }
