@@ -1,6 +1,6 @@
 package Aula10.Questao04;
 
-public class Curso implements Avaliavel, Pagavel{
+public class Curso implements Avaliavel, Compravel {
     private String titulo, nomeInstrutor;
     private double notaMedia, preco;
 
@@ -11,6 +11,14 @@ public class Curso implements Avaliavel, Pagavel{
         this.preco = preco;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getNomeInstrutor() {
+        return nomeInstrutor;
+    }
+
     @Override
     public double getNotaMedia() {
         return notaMedia;
@@ -18,7 +26,10 @@ public class Curso implements Avaliavel, Pagavel{
 
     @Override
     public String gerarResumoPublico() {
-        return "";
+        return "Título: " + titulo +
+                "\n\tInstrutor: " + nomeInstrutor +
+                "\n\tNota Média: " + notaMedia +
+                "\n\tPreço: " + preco;
     }
 
     @Override
@@ -27,7 +38,8 @@ public class Curso implements Avaliavel, Pagavel{
     }
 
     @Override
-    public double gerarRecibo(String nomeComprador) {
-        return 0;
+    public String gerarRecibo(String nomeComprador) {
+        return gerarResumoPublico() +
+                "\n\tNome do Comprador: " + nomeComprador;
     }
 }
