@@ -1,4 +1,4 @@
-package aula04;
+package Aula04;
 
 public class Drone {
     private String identificador;
@@ -33,7 +33,7 @@ public class Drone {
     }
 
     public void decolar() {
-        if (bateria<=20) {
+        if (bateria <= 20) {
             return;
         }
         emVoo = true;

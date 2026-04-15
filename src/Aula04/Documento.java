@@ -1,12 +1,13 @@
-package aula04;
+package Aula04;
 
 public class Documento {
     private String nome;
     private int numeroPaginas;
     private String prioridade, status;
-    public Documento(String nome, int numeroPaginas, String prioridade){
-        if (nome == null || nome.isEmpty() || numeroPaginas <=0 || prioridade == null
-                || !prioridade.equals("NORMAL") && !prioridade.equals("URGENTE")){
+
+    public Documento(String nome, int numeroPaginas, String prioridade) {
+        if (nome == null || nome.isEmpty() || numeroPaginas <= 0 || prioridade == null
+                || !prioridade.equals("NORMAL") && !prioridade.equals("URGENTE")) {
             throw new IllegalArgumentException();
         }
         this.nome = nome;
@@ -20,20 +21,25 @@ public class Documento {
     }
 
     public void iniciarImpressao() {
-        if (status.equals("AGUARDANDO")){
+        if (status.equals("AGUARDANDO")) {
             status = "IMPRIMINDO";
         }
     }
 
     public void concluir() {
-        if (status.equals("IMPRIMINDO")){
+        if (status.equals("IMPRIMINDO")) {
             status = "CONCLUIDO";
         }
     }
-    public String getPrioridade(){
+
+    public String getPrioridade() {
         return prioridade;
     }
-    public String getNome(){
+
+    public String getNome() {
         return nome;
+    }
+    public int getNumeroPaginas(){
+        return numeroPaginas;
     }
 }
