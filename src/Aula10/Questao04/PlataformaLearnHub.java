@@ -5,7 +5,6 @@ import java.util.List;
 
 public class PlataformaLearnHub {
     private List<Avaliavel> avaliaveis = new ArrayList<>();
-    private List<Compravel> compraveis = new ArrayList<>();
 
     public void cadastrar(Avaliavel avaliavel) {
         avaliaveis.add(avaliavel);
@@ -34,11 +33,9 @@ public class PlataformaLearnHub {
 
     public String gerarPaginaDeBusca(double notaMinina) {
         StringBuilder res = new StringBuilder();
-        for (Avaliavel a : avaliaveis) {
-            if(a.getNotaMedia() >= notaMinina){
+        for (Avaliavel a : listarPorNotaMinima(notaMinina)) {
                 res.append(a.gerarResumoPublico() + "\n");
             }
-        }
         return res.toString();
     }
 
@@ -56,8 +53,7 @@ public class PlataformaLearnHub {
     }
     public List<String> gerarRecibosEmLote(String nomeComprador){
         List<String> recibos = new ArrayList<>();
-        for (Avaliavel avaliavel : avaliaveis){
-            if(avaliavel instanceof Compravel c)
+        for (Compravel c : listarCompravel()){
             recibos.add(c.gerarRecibo(nomeComprador) + "\n");
         }
         return recibos;
