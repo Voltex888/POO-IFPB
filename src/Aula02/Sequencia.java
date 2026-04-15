@@ -1,4 +1,4 @@
-package aula02;
+package Aula02;
 
 public class Sequencia {
     int[] numeros;

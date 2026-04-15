@@ -1,4 +1,4 @@
-package aula02;
+package Aula02;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

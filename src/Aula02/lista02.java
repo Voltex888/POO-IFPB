@@ -1,4 +1,4 @@
-package aula02;
+package Aula02;
 
 public class lista02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package aula02;
+package Aula02;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
