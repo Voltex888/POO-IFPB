@@ -1,4 +1,4 @@
-package lista05.farmacia;
+package ListaAula07.farmacia;
 
 import Aula07.Farmacia.Formula;
 import Aula07.Farmacia.Ingrediente;

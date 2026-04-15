@@ -1,4 +1,4 @@
-package lista05.treino;
+package ListaAula07.treino;
 
 import Aula07.Treinamento.Serie;
 import Aula07.Treinamento.Treino;

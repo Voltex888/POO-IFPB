@@ -1,4 +1,4 @@
-package lista05.conteudo;
+package ListaAula07.conteudo;
 
 import Aula07.Conteudo.Criador;
 import Aula07.Conteudo.Midia;
