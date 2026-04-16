@@ -14,11 +14,6 @@ public class Curso implements Avaliavel, Compravel {
     public String getTitulo() {
         return titulo;
     }
-
-    public String getNomeInstrutor() {
-        return nomeInstrutor;
-    }
-
     @Override
     public double getNotaMedia() {
         return notaMedia;
