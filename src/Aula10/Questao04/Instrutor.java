@@ -14,10 +14,6 @@ public class Instrutor implements Avaliavel {
         return nome;
     }
 
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
     @Override
     public double getNotaMedia() {
         return notaMedia;
