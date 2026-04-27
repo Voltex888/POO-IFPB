@@ -19,6 +19,10 @@ public class ProcessadorFiscal {
                 imposto = valor * 0.05;
                 xml = "<nfse>" + identificador + "</nfse>";
                 break;
+            case "MDF-e":
+                imposto = valor * 0.08;
+                xml = "mdfe>" + identificador + "</mdfe>";
+                break;
             default:
                 throw new IllegalArgumentException("Tipo desconhecido: " + tipo);
         }
