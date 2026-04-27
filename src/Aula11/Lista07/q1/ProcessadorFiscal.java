@@ -19,7 +19,7 @@ public class ProcessadorFiscal {
                 imposto = valor * 0.05;
                 xml = "<nfse>" + identificador + "</nfse>";
                 break;
-            case "MDF-e":
+            case "MDFE":
                 imposto = valor * 0.08;
                 xml = "mdfe>" + identificador + "</mdfe>";
                 break;
