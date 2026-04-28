@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ArmazenamentoComCache extends ArmazenamentoNuvem {
+public class ArmazenamentoComCache extends Armazenamento {
     private Map<String, byte[]> cache = new HashMap<>();
 
     @Override
@@ -17,9 +17,9 @@ public class ArmazenamentoComCache extends ArmazenamentoNuvem {
     public byte[] ler(String caminho) {
         return cache.getOrDefault(caminho, null);
     }
-    public void realizarBackup(ArmazenamentoNuvem origem,
-                               ArmazenamentoNuvem destino,
-                               List<String> caminhos) {
+
+    @Override
+    protected void realizarBackup(Armazenamento origem, Armazenamento destino, List<String> caminhos) {
         for (String c : caminhos) {
             byte[] dados = origem.ler(c);
             if (dados != null) {
