@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ArmazenamentoNuvem extends Armazenamento {
+public class ArmazenamentoNuvem implements Armazenamento {
     private Map<String, byte[]> storage = new HashMap<>();
 
     public void gravar(String caminho, byte[] dados) {
@@ -13,15 +13,5 @@ public class ArmazenamentoNuvem extends Armazenamento {
 
     public byte[] ler(String caminho) {
         return storage.get(caminho);
-    }
-
-    @Override
-    protected void realizarBackup(Armazenamento origem, Armazenamento destino, List<String> caminhos) {
-        for (String c : caminhos) {
-            byte[] dados = origem.ler(c);
-            if (dados != null) {
-                destino.gravar(c, dados);
-            }
-        }
     }
 }
