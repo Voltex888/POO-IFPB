@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 public class ArmazenamentoComCache implements Armazenamento {
+    private Armazenamento nuvem;
     private Map<String, byte[]> cache = new HashMap<>();
+
+    public ArmazenamentoComCache(Armazenamento nuvem) {
+        this.nuvem = nuvem;
+    }
 
     @Override
     public void gravar(String caminho, byte[] dados) {
