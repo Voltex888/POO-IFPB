@@ -6,8 +6,8 @@ import java.util.List;
 public class Main {
     static void main() {
         List<Pagamento> lista = new ArrayList<>();
-        lista.add(new Pagamento("PIX"));
-        lista.add(new Pagamento("BOLETO"));
+        lista.add(new PagamentoPix());
+        lista.add(new PagamentoBoleto());
         Processo p = new Processo(lista);
         p.processarPagamentos();
     }
