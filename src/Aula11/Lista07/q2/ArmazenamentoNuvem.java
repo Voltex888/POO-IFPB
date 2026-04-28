@@ -8,9 +8,7 @@ public class ArmazenamentoNuvem implements Armazenamento {
     private Armazenamento nuvem;
     private Map<String, byte[]> storage = new HashMap<>();
 
-    public ArmazenamentoNuvem(Armazenamento nuvem) {
-        this.nuvem = nuvem;
-    }
+    public ArmazenamentoNuvem() {}
 
     public void gravar(String caminho, byte[] dados) {
         storage.put(caminho, dados);
