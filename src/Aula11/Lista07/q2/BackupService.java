@@ -2,7 +2,7 @@ package Aula11.Lista07.q2;
 
 import java.util.List;
 
-public abstract class BackupService {
+public class BackupService {
     public static void realizarBackup(
             Armazenamento origem,
             Armazenamento destino,
