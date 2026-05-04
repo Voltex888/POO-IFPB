@@ -1,25 +1,17 @@
 package Aula11.Lista07.q1;
 
-public class MDFe implements DocumentoFiscal{
-    double valor;
-    String indentificador;
+public class MDFe extends DocumentoFiscal{
     public MDFe(double valor, String indentificador) {
-        this.valor = valor;
-        this.indentificador = indentificador;
+        super(valor, indentificador);
     }
 
     @Override
-    public double calcularImposto(double valor) {
+    public double calcularImposto() {
         return valor * 0.08;
     }
 
     @Override
     public String gerarXML() {
         return "<mdfe>" + indentificador + "</mdfe>";
-    }
-
-    @Override
-    public String getIndentificador() {
-        return indentificador;
     }
 }
