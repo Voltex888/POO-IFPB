@@ -1,23 +1,17 @@
 package Aula11.Lista07.q1;
 
-public class CTe implements DocumentoFiscal{
-    double valor;
-    String indentificador;
+public class CTe extends DocumentoFiscal{
     public CTe(double valor, String indentificador) {
+        super(valor, indentificador);
     }
 
     @Override
-    public double calcularImposto(double valor) {
+    public double calcularImposto() {
         return valor * 0.12;
     }
 
     @Override
     public String gerarXML() {
         return "<cte>" + indentificador + "</cte>";
-    }
-
-    @Override
-    public String getIndentificador() {
-        return indentificador;
     }
 }
