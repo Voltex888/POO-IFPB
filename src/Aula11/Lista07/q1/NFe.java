@@ -1,25 +1,17 @@
 package Aula11.Lista07.q1;
 
-public class NFe implements DocumentoFiscal{
-    double valor;
-    String indentificador;
+public class NFe extends DocumentoFiscal{
     public NFe(double valor, String indentificador) {
-        this.valor = valor;
-        this.indentificador = indentificador;
+        super(valor, indentificador);
     }
 
     @Override
-    public double calcularImposto(double valor) {
+    public double calcularImposto() {
         return valor * 0.18;
     }
 
     @Override
     public String gerarXML() {
         return "<nfe>" + indentificador + "</nfe>";
-    }
-
-    @Override
-    public String getIndentificador() {
-        return indentificador;
     }
 }
