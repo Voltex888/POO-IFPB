@@ -1,25 +1,17 @@
 package Aula11.Lista07.q1;
 
-public class NFSe implements DocumentoFiscal{
-    double valor;
-    String indentificador;
+public class NFSe extends DocumentoFiscal{
     public NFSe(double valor, String indentificador) {
-        this.valor = valor;
-        this.indentificador = indentificador;
+        super(valor, indentificador);
     }
 
     @Override
-    public double calcularImposto(double valor) {
+    public double calcularImposto() {
         return valor * 0.05;
     }
 
     @Override
     public String gerarXML() {
         return "<nfse>" + indentificador + "</nfse>";
-    }
-
-    @Override
-    public String getIndentificador() {
-        return indentificador;
     }
 }
