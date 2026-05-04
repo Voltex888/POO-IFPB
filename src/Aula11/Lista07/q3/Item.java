@@ -5,9 +5,25 @@ public class Item {
     private Double valor;
     private int quantidade;
 
-    public Item(String nome, Double valor, int quantidade) {
+    public Item(String nome, Double precoUnitario, int quantidade) {
         this.nome = nome;
-        this.valor = valor;
+        this.valor = precoUnitario;
         this.quantidade = quantidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Double getTotal() {
+        return valor * quantidade;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public Double getValor() {
+        return valor;
     }
 }
