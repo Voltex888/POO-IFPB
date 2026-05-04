@@ -1,10 +1,14 @@
 package Aula11.Lista07.q1;
 
-public interface DocumentoFiscal {
+    public abstract class DocumentoFiscal {
+        protected double valor;
+        protected String indentificador;
 
-    double calcularImposto(double valor);
+        public DocumentoFiscal(double valor, String indentificador) {
+            this.valor = valor;
+            this.indentificador = indentificador;
+        }
+        public abstract double calcularImposto();
 
-    String gerarXML();
-
-    String getIndentificador();
-}
+        public abstract String gerarXML();
+    }
