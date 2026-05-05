@@ -1,24 +1,21 @@
 package Aula13;
 
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
-    static void main() throws ValidacaoException{
-        GerenciadorDeUsuarios g = new GerenciadorDeUsuarios();
-        Scanner sc = new Scanner(System.in);
-        sc.nextLine();
-
-        try{
-            g.cadastrar(null, null);
-        } catch (ValidacaotextualException | ValidacaoDataException e){
-          //e.printStackTrace();
-            System.out.println("Tipo de tratamento para erro");
-          throw new IllegalArgumentException();
-        } finally {
-            System.out.println("Finally executado");
-        }
-        if (sc != null){
-            sc.close();
+    static void main() {
+        try (FileReader fr = new FileReader("./arquivo.txt");
+        BufferedReader br = new BufferedReader(fr)) {
+            String line;
+            while ((line = br.readLine()) != null{
+                System.out.println(line);
+            }
+            fr.readAllAsString();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }
