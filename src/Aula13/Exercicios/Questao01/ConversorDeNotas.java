@@ -2,7 +2,6 @@ package Aula13.Exercicios.Questao01;
 
 public class ConversorDeNotas {
     private double nota;
-    private char faixa;
     public ConversorDeNotas() {
     }
 
@@ -17,17 +16,17 @@ public class ConversorDeNotas {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    public char obterConceito(double nota) {
+    public String obterConceito(double nota) {
         if (nota > 10 || nota < 0) throw new IllegalArgumentException("Sua nota é inválida");
 
         if (nota >= 9) {
-            return 'A';
+            return "A";
         } if (nota >= 7){
-            return 'B';
+            return "B";
         } if (nota >= 5) {
-            return 'C';
+            return "C";
         } else {
-            return 'D';
+            return "D";
         }
     }
 }
