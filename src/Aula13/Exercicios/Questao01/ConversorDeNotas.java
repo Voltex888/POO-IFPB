@@ -1,4 +1,4 @@
-package Aula13.Exercicios;
+package Aula13.Exercicios.Questao01;
 
 public class ConversorDeNotas {
     private double nota;
@@ -28,8 +28,14 @@ public class ConversorDeNotas {
         if (nota >= 5 && nota <= 6.9){
             faixa = 'C';
         }
-        if (nota < 5) {
+        if (nota < 5 && nota >= 0 ) {
             faixa = 'D';
         }
+
+    }
+    public void obterConceito(double nota){
+        if (nota > 10 && nota < 0) throw new IllegalArgumentException();
+        obterFaixa();
     }
 }
+
