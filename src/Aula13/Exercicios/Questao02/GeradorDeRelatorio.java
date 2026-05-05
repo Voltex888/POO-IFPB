@@ -39,4 +39,15 @@ public class GeradorDeRelatorio {
             }
         }
     }
+
+    static void gerarRelatorioTWR(String caminhoEntrada, String caminhoSaida) {
+        try{
+            BufferedReader leitor = new BufferedReader(new FileReader(caminhoEntrada));
+            BufferedWriter escritor = new BufferedWriter(new FileWriter(caminhoSaida));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
