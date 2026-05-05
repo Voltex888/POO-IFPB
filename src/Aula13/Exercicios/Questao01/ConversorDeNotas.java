@@ -16,18 +16,12 @@ public class ConversorDeNotas {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    public String obterConceito(double nota) {
-        if (nota > 10 || nota < 0) throw new IllegalArgumentException("Sua nota é inválida");
-
-        if (nota >= 9) {
-            return "A";
-        } if (nota >= 7){
-            return "B";
-        } if (nota >= 5) {
-            return "C";
-        } else {
-            return "D";
-        }
+    public static String obterConceito(double nota) {
+        if (nota >= 9) return "A";
+        if (nota >= 7) return "B";
+        if (nota >= 5) return "C";
+        return "D";
+    }
     }
 }
 
