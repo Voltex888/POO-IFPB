@@ -2,7 +2,7 @@ package Aula13.Exercicios;
 
 public class ConversorDeNotas {
     private double nota;
-
+    private char faixa;
     public ConversorDeNotas() {
     }
 
@@ -17,5 +17,19 @@ public class ConversorDeNotas {
     public void setNota(double nota) {
         this.nota = nota;
     }
+    public void obterFaixa(){
 
+        if (nota >= 9 && nota <= 10){
+            faixa = 'A';
+        }
+        if (nota >= 7 && nota <= 8.9){
+            faixa = 'B';
+        }
+        if (nota >= 5 && nota <= 6.9){
+            faixa = 'C';
+        }
+        if (nota < 5) {
+            faixa = 'D';
+        }
+    }
 }
