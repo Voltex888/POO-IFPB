@@ -31,6 +31,7 @@ public class ConversorDeNotas {
         if (nota < 5 && nota >= 0 ) {
             faixa = 'D';
         }
+        System.out.println(faixa);
 
     }
     public void obterConceito(double nota){
