@@ -1,14 +1,13 @@
-package Aula13;
+package Aula13.Exemplos;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class Main {
     static void main() {
         try (FileReader fr = new FileReader("./arquivo.txt");
         BufferedReader br = new BufferedReader(fr)) {
             String line;
-            while ((line = br.readLine()) != null{
+            while ((line = br.readLine()) != null){
                 System.out.println(line);
             }
             fr.readAllAsString();
