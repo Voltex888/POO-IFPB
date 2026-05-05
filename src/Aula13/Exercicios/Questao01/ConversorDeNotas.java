@@ -17,26 +17,18 @@ public class ConversorDeNotas {
     public void setNota(double nota) {
         this.nota = nota;
     }
-    public void obterFaixa(){
+    public char obterConceito(double nota) {
+        if (nota > 10 || nota < 0) throw new IllegalArgumentException("Sua nota é inválida");
 
-        if (nota >= 9 && nota <= 10){
-            faixa = 'A';
+        if (nota >= 9) {
+            return 'A';
+        } if (nota >= 7){
+            return 'B';
+        } if (nota >= 5) {
+            return 'C';
+        } else {
+            return 'D';
         }
-        if (nota >= 7 && nota <= 8.9){
-            faixa = 'B';
-        }
-        if (nota >= 5 && nota <= 6.9){
-            faixa = 'C';
-        }
-        if (nota < 5 && nota >= 0 ) {
-            faixa = 'D';
-        }
-        System.out.println(faixa);
-
-    }
-    public void obterConceito(double nota){
-        if (nota > 10 && nota < 0) throw new IllegalArgumentException();
-        obterFaixa();
     }
 }
 
