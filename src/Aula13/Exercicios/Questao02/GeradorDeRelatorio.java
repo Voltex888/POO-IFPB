@@ -13,11 +13,30 @@ public class GeradorDeRelatorio {
             String linha;
             boolean primeiraLinha= true;
 
-
+            while((linha= leitor.readLine()) != null){
+                if (primeiraLinha){
+                    primeiraLinha = false;
+                    continue;
+                }
+                String resultado = processarLinha(linha);
+                if (resultado != null){
+                    escritor.write(resultado);
+                    escritor.newLine();
+                }
+            }
+            System.out.println("[Versão A] Relatório gerado com sucesso: " + caminhoSaida);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+            System.err.println("[Versão A] Arquivo de entrada não encontrado: " + caminhoEntrada);
+            System.err.println("         Verifique o caminho e tente novamente.");
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.err.println("[Versão A] Erro durante leitura/escrita: " + e.getMessage());
+        } finally {
+            if (leitor != null){
+                try { leitor.close(); }
+                catch (IOException e ){
+                    System.err.println("[Versão A] Falha ao fechar o escritor: " + e.getMessage());
+                }
+            }
         }
     }
 }
