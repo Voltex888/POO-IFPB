@@ -1,13 +1,9 @@
 package Aula11.Lista07.q3;
 
 public class Item {
-    private String nome;
-    private Double valor;
-    private int quantidade;
-
-    public Item(String nome, Double precoUnitario, int quantidade) {
+    public Item(String nome, double precoUnitario, int quantidade) {
         this.nome = nome;
-        this.valor = precoUnitario;
+        this.precoUnitario = precoUnitario;
         this.quantidade = quantidade;
     }
 
@@ -15,15 +11,15 @@ public class Item {
         return nome;
     }
 
-    public Double getTotal() {
-        return valor * quantidade;
+    public double getPrecoUnitario() {
+        return precoUnitario;
     }
 
     public int getQuantidade() {
         return quantidade;
     }
 
-    public Double getValor() {
-        return valor;
-    }
+    String nome;
+    double precoUnitario;
+    int quantidade;
 }
