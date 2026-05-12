@@ -33,5 +33,12 @@ public class MainCollections {
         System.out.println(contatos);
 
         Queue<Integer> fila = new LinkedList<>();
+
+        fila.add(10);
+        fila.add(20);
+        fila.add(30);
+
+        System.out.println("\nFILA");
+        System.out.println(fila.poll());
     }
 }
