@@ -40,5 +40,7 @@ public class MainCollections {
 
         System.out.println("\nFILA");
         System.out.println(fila.poll());
+
+        System.out.println(fila);
     }
 }
