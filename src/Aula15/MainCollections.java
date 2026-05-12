@@ -1,6 +1,146 @@
 package Aula15;
 
 import java.util.*;
+/*
+========================================
+JAVA COLLECTIONS
+========================================
+
+List
+- Coleção ordenada
+- Permite valores duplicados
+- Melhor quando:
+  -> Você precisa de índices
+  -> Você quer elementos repetidos
+  -> Você precisa manter ordem
+
+Principais implementações:
+- ArrayList
+  -> Mais rápido para buscas
+  -> Melhor na maioria dos casos
+
+- LinkedList
+  -> Melhor para inserções e remoções
+  -> Boa para filas
+
+========================================
+Set
+========================================
+
+Set
+- NÃO permite duplicados
+- Não possui índice
+
+Principais implementações:
+- HashSet
+  -> Mais rápido
+  -> Não mantém ordem
+
+- LinkedHashSet
+  -> Mantém ordem de inserção
+
+- TreeSet
+  -> Mantém ordenado automaticamente
+
+Melhor quando:
+-> Você quer valores únicos
+-> Quer remover duplicados automaticamente
+
+========================================
+Map
+========================================
+
+Map
+- Estrutura chave + valor
+- Chaves não podem repetir
+
+Principais implementações:
+- HashMap
+  -> Mais rápido
+  -> Não mantém ordem
+
+- LinkedHashMap
+  -> Mantém ordem de inserção
+
+- TreeMap
+  -> Mantém ordenado pela chave
+
+Melhor quando:
+-> Busca por identificador
+-> CPF, ID, email, usuário etc
+
+========================================
+Queue
+========================================
+
+Queue
+- FIFO (First In First Out)
+- Primeiro que entra é o primeiro que sai
+
+Melhor quando:
+-> Fila de atendimento
+-> Sistema de senhas
+-> Processamento de tarefas
+
+Métodos comuns:
+- add()
+- poll()
+- peek()
+
+========================================
+Stack
+========================================
+
+Stack
+- LIFO (Last In First Out)
+- Último que entra é o primeiro que sai
+
+Melhor quando:
+-> Sistema de desfazer
+-> Histórico do navegador
+-> Backtracking
+
+Métodos comuns:
+- push()
+- pop()
+- peek()
+
+========================================
+ANOTAÇÕES DE COMPLEXIDADE
+========================================
+
+ArrayList
+- get() muito rápido
+- Inserção no meio é lenta
+
+LinkedList
+- Inserção e remoção rápidas
+- Acesso mais lento
+
+HashMap / HashSet
+- Busca muito rápida
+- Complexidade média O(1)
+
+TreeMap / TreeSet
+- Ordenação automática
+- Complexidade O(log n)
+
+========================================
+BOAS PRÁTICAS
+========================================
+
+- Prefira interfaces:
+  List<String> nomes = new ArrayList<>();
+
+- Use generics
+- Sobrescreva toString()
+- Use streams para filtros
+- Use Comparator para ordenação personalizada
+
+========================================
+EXEMPLOS
+========================================
+*/
 
 public class MainCollections {
     static void main(String[] args) {
