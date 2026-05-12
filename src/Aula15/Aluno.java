@@ -10,4 +10,9 @@ public class Aluno {
         this.idade = idade;
         this.nota = nota;
     }
+
+    @Override
+    public String toString() {
+        return nome + " - Com idade: " + idade + " - nota: " + nota;
+    }
 }
