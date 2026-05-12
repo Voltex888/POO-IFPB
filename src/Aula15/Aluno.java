@@ -25,6 +25,6 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return nome + " - Com idade: " + idade + " - nota: " + nota;
+        return nome + " - idade: " + idade + " - nota: " + nota;
     }
 }
