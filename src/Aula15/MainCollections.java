@@ -25,5 +25,8 @@ public class MainCollections {
         System.out.println(linguagens);
 
         Map<String, String> contatos = new HashMap<>();
+
+        contatos.put("Mateus", "99999-9999");
+        contatos.put("Ana", "98888-8888");
     }
 }
