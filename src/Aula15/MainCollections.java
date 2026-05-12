@@ -31,5 +31,7 @@ public class MainCollections {
 
         System.out.println("\nMAP");
         System.out.println(contatos);
+
+        Queue<Integer> fila = new LinkedList<>();
     }
 }
