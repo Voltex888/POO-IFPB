@@ -1,7 +1,9 @@
 package Aula15;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MainCollections {
     static void main(String[] args) {
@@ -15,5 +17,7 @@ public class MainCollections {
         for (Aluno a : alunos) {
             System.out.println(a.toString());
         }
+
+        Set<String> linguagens = new HashSet<>();
     }
 }
