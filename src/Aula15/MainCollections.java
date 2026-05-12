@@ -19,5 +19,12 @@ public class MainCollections {
         }
 
         Set<String> linguagens = new HashSet<>();
+
+        linguagens.add("Java");
+        linguagens.add("Python");
+        linguagens.add("Java");
+
+        System.out.println("\nSET");
+        System.out.println(linguagens);
     }
 }
