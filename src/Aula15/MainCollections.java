@@ -144,6 +144,15 @@ EXEMPLOS
 
 public class MainCollections {
     static void main(String[] args) {
+         /*
+        ========================================
+        ARRAYLIST
+        ========================================
+        Melhor para:
+        -> Listas dinâmicas
+        -> Muitas leituras
+        */
+
         List<Aluno> alunos = new ArrayList<>();
 
         alunos.add(new Aluno("Matheus", 20, 9.5));
@@ -153,7 +162,18 @@ public class MainCollections {
         System.out.println("LISTA DE ALUNOS");
         for (Aluno a : alunos) {
             System.out.println(a.toString());
+
         }
+
+        /*
+        ========================================
+        HASHSET
+        ========================================
+        Melhor para:
+        -> Valores únicos
+        -> Remover duplicados
+        */
+
 
         Set<String> linguagens = new HashSet<>();
 
@@ -164,6 +184,15 @@ public class MainCollections {
         System.out.println("\nSET");
         System.out.println(linguagens);
 
+        /*
+        ========================================
+        HASHMAP
+        ========================================
+        Melhor para:
+        -> Busca rápida por chave
+        -> Cadastros
+        */
+
         Map<String, String> contatos = new HashMap<>();
 
         contatos.put("Mateus", "99999-9999");
@@ -171,6 +200,13 @@ public class MainCollections {
 
         System.out.println("\nMAP");
         System.out.println(contatos);
+
+        /*
+        ========================================
+        QUEUE
+        ========================================
+        Estrutura FIFO
+        */
 
         Queue<Integer> fila = new LinkedList<>();
 
@@ -180,7 +216,21 @@ public class MainCollections {
 
         System.out.println("\nFILA");
         System.out.println(fila.poll());
-
         System.out.println(fila);
+
+          /*
+        ========================================
+        STACK
+        ========================================
+        Estrutura LIFO
+        */
+
+        Stack<String> historico = new Stack<>();
+
+        historico.push("Página 1");
+        historico.push("Página 2");
+
+        System.out.println("\nStack:");
+        System.out.println(historico.pop());
     }
 }
