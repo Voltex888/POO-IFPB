@@ -16,4 +16,9 @@ public class Contato {
     public String getTelefone() {
         return telefone;
     }
+
+    @Override
+    public String toString() {
+        return nome + " - " + telefone;
+    }
 }
