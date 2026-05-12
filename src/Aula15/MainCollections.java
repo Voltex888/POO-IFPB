@@ -28,5 +28,8 @@ public class MainCollections {
 
         contatos.put("Mateus", "99999-9999");
         contatos.put("Ana", "98888-8888");
+
+        System.out.println("\nMAP");
+        System.out.println(contatos);
     }
 }
